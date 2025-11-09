@@ -1,0 +1,13 @@
+{
+  "name": "Receipt Organizer",
+  "short_name": "Receipts",
+  "description": "Snap and organize your receipts automatically",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [],
+  "categories": ["productivity", "finance"],
+  "screenshots": []
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="Snap and organize your receipts automatically">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Receipt Organizer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📸 Receipt Organizer</h1>
+            <p>Snap a photo and we'll handle the rest</p>
+        </header>
+
+        <main>
+            <!-- Camera Preview -->
+            <div id="cameraSection" class="camera-section">
+                <video id="camera" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+
+                <!-- Preview Image -->
+                <div id="preview" class="preview" style="display: none;">
+                    <img id="previewImage" alt="Receipt preview">
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button id="captureBtn" class="btn btn-primary">
+                    📷 Take Photo
+                </button>
+
+                <button id="retakeBtn" class="btn btn-secondary" style="display: none;">
+                    🔄 Retake
+                </button>
+
+                <button id="uploadBtn" class="btn btn-success" style="display: none;">
+                    ⬆️ Upload Receipt
+                </button>
+            </div>
+
+            <!-- Status Messages -->
+            <div id="status" class="status"></div>
+
+            <!-- Upload Progress -->
+            <div id="progress" class="progress" style="display: none;">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Your receipts are processed securely and emailed to you</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
