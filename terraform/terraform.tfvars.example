@@ -1,0 +1,26 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+project_name  = "receipt-organizer"
+environment   = "dev"
+aws_region    = "us-west-1"
+ses_region    = "us-west-2"
+bedrock_region = "us-west-2"
+
+# Email Configuration
+# These emails must be verified in AWS SES
+ses_sender_email    = "your-email@example.com"
+ses_recipient_email = "your-email@example.com"
+
+# Docker Images (update after building and pushing to ECR)
+lambda_receipt_ingest_image  = "123456789012.dkr.ecr.us-west-1.amazonaws.com/receipt-ingest:latest"
+lambda_presigned_url_image   = "123456789012.dkr.ecr.us-west-1.amazonaws.com/presigned-url:latest"
+
+# CloudFront Configuration
+cloudfront_price_class = "PriceClass_100" # US, Canada, Europe
+
+# Tags
+tags = {
+  Project   = "ReceiptOrganizer"
+  ManagedBy = "Terraform"
+  Owner     = "YourName"
+}
